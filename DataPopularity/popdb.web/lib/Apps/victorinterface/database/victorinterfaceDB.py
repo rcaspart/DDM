@@ -37,7 +37,7 @@ def WhatInSiteWithStat(collType,params):
 
     vars = "SITENAME, COLLNAME"
     if  collType == 'BlocksStat':
-        table = "%s.%s" % (DBUSER, table_name)
+        table = table_name
         vars+=", sum(TOTCPU) as TOTCPU, sum(NUMACCESSES) as NACC" 
     else:
         return {}
@@ -77,7 +77,7 @@ def WhatInSiteWithStatLastAcc(collType, params):
         logger.info('applying patch to cope with the fact sitename in crab monitoring for CH_CERN moved from T0 to T2 in Apr 2013, affecting popularity statistics')
 
     vars = "SITENAME, COLLNAME, (tday - to_date('1970-01-01','YYYY-MM-DD')) * 86400 as LASTDAY"
-    table = "%s.%s" % (DBUSER, 'MV_block_stat0_last_access')
+    table = "%s" % ('MV_block_stat0_last_access')
     whereCondition =" SiteName like %s" % '%s'
     query = "select %s from %s where %s" % (vars,table,whereCondition)
 

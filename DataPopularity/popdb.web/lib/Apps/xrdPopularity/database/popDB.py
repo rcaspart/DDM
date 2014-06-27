@@ -12,7 +12,7 @@ DBUSER = 'CMS_EOS_POPULARITY_SYSTEM'
 
 def xrdStatInTimeWindow(params):
 
-    table = "%s.%s" % (DBUSER, params.table)
+    table = params.table
         
     vars  = 'xTime, yValue, yValue/3600. as rate, round((xTime-to_date(\'19700101\',\'YYYYMMDD\'))*86400)*1000 as millisecondsSinceEpoch'
 
@@ -47,13 +47,13 @@ def DSStatInTimeWindow(params):
     
     #cursor = connection.cursor()
     if params.table == 'DataTier':
-        table = "%s.%s" % (DBUSER, "MV_XRD_DS_STAT0_AGGR2")
+        table = "%s" % ("MV_XRD_DS_STAT0_AGGR2")
     elif params.table == 'DS':
-        table = "%s.%s" % (DBUSER, "MV_XRD_DS_STAT0_AGGR1")
+        table = "%s" % ("MV_XRD_DS_STAT0_AGGR1")
     elif params.table == 'DSName':
-        table = "%s.%s" % (DBUSER, "MV_XRD_DS_STAT0_AGGR4")
+        table = "%s" % ("MV_XRD_DS_STAT0_AGGR4")
     elif params.table == 'UserDS':
-        table = "%s.%s" % (DBUSER, "MV_XRD_DS_STAT1_AGGR1")
+        table = "%s" % ("MV_XRD_DS_STAT1_AGGR1")
 
     vars  = '''collName , sum(numAccesses) as nAcc, round(sum(totCPU)/3600,0) 
              as totCPU, sum(numUsers)/( to_date('%s','YYYY-MM-DD') - to_date('%s','YYYY-MM-DD') +1  ) as nUsers,
@@ -109,13 +109,13 @@ def MostPopDSStat(params):
     #cursor = connection.cursor()
 
     if params.table == 'DataTier':
-        table = "%s.%s" % (DBUSER, "MV_XRD_DS_STAT0_AGGR2")
+        table = "%s" % ("MV_XRD_DS_STAT0_AGGR2")
     elif params.table == 'DS':
-        table = "%s.%s" % (DBUSER, "MV_XRD_DS_STAT0_AGGR1")
+        table = "%s" % ("MV_XRD_DS_STAT0_AGGR1")
     elif params.table == 'DSName':
-        table = "%s.%s" % (DBUSER, "MV_XRD_DS_STAT0_AGGR4")
+        table = "%s" % ("MV_XRD_DS_STAT0_AGGR4")
     elif params.table == 'UserDS':
-        table = "%s.%s" % (DBUSER, "MV_XRD_DS_STAT1_AGGR1")
+        table = "%s" % ("MV_XRD_DS_STAT1_AGGR1")
 
     #TimeFormats: timeformat acts to the displayed date, timeformatTrunc acts to the truncation of the input dates, and should be keept with the format of the aggregation
 
@@ -177,7 +177,7 @@ def UserStatInTimeWindow(params):
 
     #cursor = connection.cursor()
     
-    table = "%s.%s" % (DBUSER, "MV_XRD_DS_STAT0_AGGR3")
+    table = "%s" % ("MV_XRD_DS_STAT0_AGGR3")
 
     orderBy  = "%s " % params.orderVar
     

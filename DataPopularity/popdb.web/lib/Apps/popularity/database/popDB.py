@@ -13,11 +13,11 @@ def DSStatInTimeWindow(params, MView):
     
     #cursor = connection.cursor()
     if MView == 'DataTier':
-        table = "%s.%s" % (DBUSER, "MV_DS_STAT0_AGGR2")
+        table = "%s" % ("MV_DS_STAT0_AGGR2")
     elif MView == 'DS':
-        table = "%s.%s" % (DBUSER, "MV_DS_STAT0_AGGR1")
+        table = "%s" % ("MV_DS_STAT0_AGGR1")
     elif MView == 'DSName':
-        table = "%s.%s" % (DBUSER, "MV_DS_STAT0_AGGR4")
+        table = "%s" % ("MV_DS_STAT0_AGGR4")
 
 
     vars  = '''collName , sum(numAccesses) as nAcc, round(sum(totCPU)/3600,0) 
@@ -74,11 +74,11 @@ def MostPopDSStat(params, MView, collName):
     #cursor = connection.cursor()
 
     if MView == 'DataTier':
-        table = "%s.%s" % (DBUSER, "MV_DS_STAT0_AGGR2")
+        table = "%s" % ("MV_DS_STAT0_AGGR2")
     elif MView == 'DS':
-        table = "%s.%s" % (DBUSER, "MV_DS_STAT0_AGGR1")
+        table = "%s" % ("MV_DS_STAT0_AGGR1")
     elif MView == 'DSName':
-        table = "%s.%s" % (DBUSER, "MV_DS_STAT0_AGGR4")
+        table = "%s" % ("MV_DS_STAT0_AGGR4")
 
     #TimeFormats: timeformat acts to the displayed date, timeformatTrunc acts to the truncation of the input dates, and should be keept with the format of the aggregation
 
@@ -131,7 +131,7 @@ def UserStatInTimeWindow(params):
 
     #cursor = connection.cursor()
     
-    table = "%s.%s" % (DBUSER, "MV_DS_STAT0_AGGR3")
+    table = "%s" % ("MV_DS_STAT0_AGGR3")
 
     vars  = '''userid, sum(numAccesses) as nAcc, 
                round(sum(totCPU)/3600,0) as totCPU, 
@@ -153,7 +153,7 @@ def UserStatInTimeWindow(params):
     else:
         orderBy  = "totCPU desc"
         
-    useridtable = "%s.%s" % (DBUSER, "MV_USER_USERID")
+    useridtable = "%s" % ("MV_USER_USERID")
 
     #NB: the additional group by username at the end of this query is needed because I discovered
     ##   that the unicity userid <-> username is not guarantee: the same username can have more than one userid in dashboard
@@ -195,7 +195,7 @@ def CorruptedFilesInTimeWindow(params):
 
     #cursor = connection.cursor()
     
-    table = "%s.%s" % (DBUSER, params.dbview)
+    table = params.dbview
 
     query = '''select * from %s 
     where sitename like %%s ;''' % (table)

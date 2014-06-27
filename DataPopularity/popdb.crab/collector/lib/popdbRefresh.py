@@ -139,7 +139,7 @@ def _refresh_SingleMV(table,mode='F'):
     connection = cx_Oracle.Connection(connection_string)
     cursor = cx_Oracle.Cursor(connection)
     
-    cursor.callproc('CMS_POPULARITY_SYSTEM.MVREFRESH',[table,mode]);
+    cursor.callproc('MVREFRESH',[table,mode]);
     stop_time=datetime.now()
     printStats(start_time,stop_time,table)
     
@@ -157,7 +157,7 @@ def _refresh_with_alter(table,mode='F'):
     cursor = cx_Oracle.Cursor(connection)
 
     cursor.execute('alter session set "_replace_virtual_columns"=FALSE')
-    cursor.callproc('CMS_POPULARITY_SYSTEM.MVREFRESH',[table,mode]);
+    cursor.callproc('MVREFRESH',[table,mode]);
     stop_time=datetime.now()
     printStats(start_time,stop_time,table)
     
@@ -175,7 +175,7 @@ def _refresh_T_CorruptedFiles():
     connection = cx_Oracle.Connection(connection_string)
     cursor = cx_Oracle.Cursor(connection)
     
-    cursor.callproc('CMS_POPULARITY_SYSTEM.CORRUPTEDFILEREFRESH');
+    cursor.callproc('CORRUPTEDFILEREFRESH');
     stop_time=datetime.now()
     printStats(start_time,stop_time,'CORRUPTEDFILEREFRESH')
     
@@ -276,7 +276,7 @@ class DB2DB:
 
     def _set_TimeWindow(self):
         
-        query = "select to_char(max(finishedtimestamp),'yyyy-mm-dd hh24:mi:ss') from  CMS_POPULARITY_SYSTEM.raw_file"
+        query = "select to_char(max(finishedtimestamp),'yyyy-mm-dd hh24:mi:ss') from  raw_file"
         self.cursor.execute(query)
 
         row = self.cursor.fetchone()[0]

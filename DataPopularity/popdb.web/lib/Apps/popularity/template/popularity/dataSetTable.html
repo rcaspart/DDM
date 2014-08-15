@@ -92,13 +92,13 @@
 
         $(document).ready(function(){
 		setDates();
-		DataSetStatInTimeWindow('{% url DSStatInTimeWindow %}');
+		DataSetStatInTimeWindow('{% url "DSStatInTimeWindow" %}');
 		});
         $('#submit').click(function() {
-                DataSetStatInTimeWindow('{% url DSStatInTimeWindow %}');
+                DataSetStatInTimeWindow('{% url "DSStatInTimeWindow" %}');
         });
     $("#select_siteName").bind("change", function() {
-            DataSetStatInTimeWindow('{% url DSStatInTimeWindow %}');
+            DataSetStatInTimeWindow('{% url "DSStatInTimeWindow" %}');
     });
 
 </script>

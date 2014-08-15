@@ -8,7 +8,7 @@
 
 
 {% block js %}
-{% url dataTiers as insert_inputtableurl %}
-{% url getSingleDTPlotStat as insert_jsonurl %}
+{% url "dataTiers" as insert_inputtableurl %}
+{% url "getSingleDTPlotStat" as insert_jsonurl %}
 {{ block.super }}
 {% endblock js %}

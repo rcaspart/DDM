@@ -70,7 +70,7 @@
 	};
 
 
-    var jsonurl= "{% url xrdMonPlotData %}"
+    var jsonurl= "{% url "xrdMonPlotData" %}"
     {% with thefunction="hctimeplot(jsonurl,info); " %}
 
         $(document).ready(function(){

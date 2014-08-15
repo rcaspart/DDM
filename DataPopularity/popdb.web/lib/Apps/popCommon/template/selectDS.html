@@ -6,7 +6,7 @@
 	$(function() {
 
 		$( "#select_dataSet" ).autocomplete({
-                        {% url availableDataSets as the_url %}
+                        {% url "availableDataSets" as the_url %}
 			source: "availableDataSets",
                         minLength: 3,
 		});

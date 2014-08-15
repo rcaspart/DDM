@@ -8,6 +8,6 @@
 
 
 {% block js %}
-{% url xrdGetDTPlotData as insert_jsonurl %}
+{% url "xrdGetDTPlotData" as insert_jsonurl %}
 {{ block.super }}
 {% endblock js %}

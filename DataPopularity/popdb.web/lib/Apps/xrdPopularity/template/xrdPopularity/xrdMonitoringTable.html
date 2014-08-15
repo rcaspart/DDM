@@ -75,7 +75,7 @@
 	return apiUrl;
 	};
 
-       var jsonurl= buildUrl("{% url xrdmonendtime %}")
+       var jsonurl= buildUrl("{% url "xrdmonendtime" %}")
        {% with thefunction="xrdMonitoringDataTable(jsonurl);" %}
 
         $(document).ready(function(){

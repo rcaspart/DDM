@@ -14,7 +14,7 @@
 
 
 {% block js %}
-{% url xrdProcessedDataSets as insert_inputtableurl %}
-{% url xrdGetSingleProcessedDSPlotStat as insert_jsonurl %}
+{% url "xrdProcessedDataSets" as insert_inputtableurl %}
+{% url "xrdGetSingleProcessedDSPlotStat" as insert_jsonurl %}
 {{ block.super }}
 {% endblock js %}

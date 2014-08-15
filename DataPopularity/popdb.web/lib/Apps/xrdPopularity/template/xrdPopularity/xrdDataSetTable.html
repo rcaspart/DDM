@@ -15,6 +15,6 @@
 
 
 {% block js %}
-{% url xrdDSStatInTimeWindow as insert_jsonurlbase %}
+{% url "xrdDSStatInTimeWindow" as insert_jsonurlbase %}
 {{ block.super }}
 {% endblock js %}

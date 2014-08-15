@@ -8,6 +8,6 @@
 
 
 {% block js %}
-{% url getDSNPlotData as insert_jsonurl %}
+{% url "getDSNPlotData" as insert_jsonurl %}
 {{ block.super }}
 {% endblock js %}

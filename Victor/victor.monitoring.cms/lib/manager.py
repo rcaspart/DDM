@@ -8,7 +8,7 @@ You may obtain a copy of the License at U{http://www.apache.org/licenses/LICENSE
 
 
 #!/usr/bin/env python
-from django.core.management import execute_manager
+from django.core.management import execute_from_command_line
 import imp
 try:
     imp.find_module('settings') # Assumed to be in the same directory.
@@ -20,5 +20,5 @@ except ImportError:
 import settings
 
 if __name__ == "__main__":
-    execute_manager(settings)
+    execute_from_command_line(settings)
 # Django settings for victor_web project.

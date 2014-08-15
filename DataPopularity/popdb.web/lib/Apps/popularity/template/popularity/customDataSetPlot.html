@@ -14,7 +14,7 @@
 
 
 {% block js %}
-{% url dataSets as insert_inputtableurl %}
-{% url getSingleDSPlotStat as insert_jsonurl %}
+{% url "dataSets" as insert_inputtableurl %}
+{% url "getSingleDSPlotStat" as insert_jsonurl %}
 {{ block.super }}
 {% endblock js %}

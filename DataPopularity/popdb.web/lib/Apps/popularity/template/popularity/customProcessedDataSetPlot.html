@@ -13,7 +13,7 @@
 {% endblock body_content %}
 
 {% block js %}
-{% url processedDataSets as insert_inputtableurl %}
-{% url getSingleDSNPlotStat as insert_jsonurl %}
+{% url "processedDataSets" as insert_inputtableurl %}
+{% url "getSingleDSNPlotStat" as insert_jsonurl %}
 {{ block.super }}
 {% endblock js %}

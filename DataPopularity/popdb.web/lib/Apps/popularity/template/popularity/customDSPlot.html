@@ -109,7 +109,7 @@ It is also possible to filter the search by a site name.</p>
     $(document).ready(function(){
                 setDefaultEndDate();
                 setDefautlStartDate();
-                var table = DataSetTable('{% url dataSets %}');
+                var table = DataSetTable('{% url "dataSets" %}');
                 console.log(table);
 		$("#DataSetTable tbody").click(function(event) {
         		//$(table.fnSettings().aoData).each(function (){
@@ -127,7 +127,7 @@ It is also possible to filter the search by a site name.</p>
         		var anSelected = fnGetSelected(table);
 			var selectedds = table[anSelected];
 			console.log(table.fnGetData(anSelected[0], 0));
-			additemtotimeplot(table.fnGetData(anSelected[0], 0), '{% url getSingleDSPlotStat %}');
+			additemtotimeplot(table.fnGetData(anSelected[0], 0), '{% url "getSingleDSPlotStat" %}');
     		} );
 		*/
 		/*
@@ -141,11 +141,11 @@ It is also possible to filter the search by a site name.</p>
 			console.log(anSelected)
 			for(i = 0; i < anSelected.length; i++){
 				console.log(table.fnGetData(anSelected[i], 0))
-				additemtotimeplot(table.fnGetData(anSelected[i], 0), '{% url getSingleDSPlotStat %}')
+				additemtotimeplot(table.fnGetData(anSelected[i], 0), '{% url "getSingleDSPlotStat" %}')
 			}
                         //var selectedds = table[anSelected];
                         //console.log(table.fnGetData(anSelected[0], 0));
-                        //additemtotimeplot(table.fnGetData(anSelected[0], 0), '{% url getSingleDSPlotStat %}');
+                        //additemtotimeplot(table.fnGetData(anSelected[0], 0), '{% url "getSingleDSPlotStat" %}');
                 } );
 
 		$('#clear_plot').click( function() {
@@ -153,19 +153,19 @@ It is also possible to filter the search by a site name.</p>
 		});
 
         $('#select_popIdx').bind("change", function() {
-                updateplot('{% url getSingleDSPlotStat %}');
+                updateplot('{% url "getSingleDSPlotStat" %}');
         });
         $('#select_timeAggr').bind("change", function() {
-                updateplot('{% url getSingleDSPlotStat %}');
+                updateplot('{% url "getSingleDSPlotStat" %}');
         });
         $('#select_siteName').bind("change", function() {
-                updateplot('{% url getSingleDSPlotStat %}');
+                updateplot('{% url "getSingleDSPlotStat" %}');
         });
         $('#select_metric').bind("change", function() {
-                updateplot('{% url getSingleDSPlotStat %}');
+                updateplot('{% url "getSingleDSPlotStat" %}');
         });
         $('#submit').bind('click', function() {
-                updateplot('{% url getSingleDSPlotStat %}')
+                updateplot('{% url "getSingleDSPlotStat" %}')
         });
 
 
@@ -181,7 +181,7 @@ It is also possible to filter the search by a site name.</p>
             datatype: "DataSets",
             today: new Date().toDateString()
         }
-    {% url getDSPlotData as the_url %}
+    {% url "getDSPlotData" as the_url %}
         $(document).ready(function(){
 
                 setDefaultEndDate();

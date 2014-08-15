@@ -85,7 +85,7 @@
 
 <script>
 
-	{% url getUserStat as staturl %}
+	{% url "getUserStat" as staturl %}
     $(document).ready(function(){
     	setDates();
 	userStatTable("{{ staturl }}");

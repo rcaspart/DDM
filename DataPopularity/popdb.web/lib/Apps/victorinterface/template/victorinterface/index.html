@@ -29,7 +29,7 @@
 	<table class="elements" cellspacing="0">
 
         <tr>
-                <td class="elementName" colspan="2"><a href="{% url accessedBlocksStat %}">accessedBlocksStat</a></td>
+                <td class="elementName" colspan="2"><a href="{% url "accessedBlocksStat" %}">accessedBlocksStat</a></td>
         </tr>
         <tr>
                 <td class="feature" width="15%">Method</td>
@@ -52,10 +52,10 @@
         <tr>
                 <td class="feature">Examples</td>
                 <td class="descr">
-			1. Retrieve the list for all the sites: <a href="{% url accessedBlocksStat %}?sitename=T%">accessedBlocksStat/?sitename=T%</a>
+			1. Retrieve the list for all the sites: <a href="{% url "accessedBlocksStat" %}?sitename=T%">accessedBlocksStat/?sitename=T%</a>
 
-			<br> 2. Retrieve the list for a given site (e.g. T2_IT_Pisa): <a href="{% url accessedBlocksStat %}?sitename=T2_IT_Pisa">accessedBlocksStat/?sitename=T2_IT_Pisa</a>
-			<br> 3. Retrieve the list for sites satisfying a regex (e.g. T2_UK_%) <a href="{% url accessedBlocksStat %}?sitename=T2_UK_%">accessedBlocksStat/?sitename=T2_UK_%</a>
+			<br> 2. Retrieve the list for a given site (e.g. T2_IT_Pisa): <a href="{% url "accessedBlocksStat" %}?sitename=T2_IT_Pisa">accessedBlocksStat/?sitename=T2_IT_Pisa</a>
+			<br> 3. Retrieve the list for sites satisfying a regex (e.g. T2_UK_%) <a href="{% url "accessedBlocksStat" %}?sitename=T2_UK_%">accessedBlocksStat/?sitename=T2_UK_%</a>
 
                         <br>
                 </td>
@@ -86,15 +86,15 @@
         <tr>
                 <td class="feature">Examples</td>
                 <td class="descr">
-                        1. Retrieve the list for a given site (e.g. T2_IT_Pisa): <a href="{% url popdbcombine %}?sitename=T2_IT_Pisa">popdbcombine/?sitename=T2_IT_Pisa</a>
+                        1. Retrieve the list for a given site (e.g. T2_IT_Pisa): <a href="{% url "popdbcombine" %}?sitename=T2_IT_Pisa">popdbcombine/?sitename=T2_IT_Pisa</a>
 			<br>
-                        2. Retrieve the list for a given site (e.g. T2_IT_Pisa) in a specified time window: <a href="{% url popdbcombine %}?sitename=T2_IT_Pisa&tstart=2012-02-10&tstop=2012-02-11">popdbcombine/?sitename=T2_IT_Pisa&tstart=2012-02-10&tstop=2012-02-11</a>
+                        2. Retrieve the list for a given site (e.g. T2_IT_Pisa) in a specified time window: <a href="{% url "popdbcombine" %}?sitename=T2_IT_Pisa&tstart=2012-02-10&tstop=2012-02-11">popdbcombine/?sitename=T2_IT_Pisa&tstart=2012-02-10&tstop=2012-02-11</a>
                         <br>
                 </td>
         </tr>
 
         <tr>
-                <td class="elementName" colspan="2"><a href="{% url accessedBlocksStatLastAcc %}">accessedBlocksStatLastAcc</a></td>
+                <td class="elementName" colspan="2"><a href="{% url "accessedBlocksStatLastAcc" %}">accessedBlocksStatLastAcc</a></td>
         </tr>
         <tr>
                 <td class="feature" width="15%">Method</td>
@@ -117,10 +117,10 @@
         <tr>
                 <td class="feature">Examples</td>
                 <td class="descr">
-                        1. Retrieve the list for all the sites: <a href="{% url accessedBlocksStatLastAcc %}?sitename=T%">accessedBlocksStatLastAcc/?sitename=T%</a>
+                        1. Retrieve the list for all the sites: <a href="{% url "accessedBlocksStatLastAcc" %}?sitename=T%">accessedBlocksStatLastAcc/?sitename=T%</a>
 
-                        <br> 2. Retrieve the list for a given site (e.g. T2_IT_Pisa): <a href="{% url accessedBlocksStatLastAcc %}?sitename=T2_IT_Pisa">accessedBlocksStatLastAcc/?sitename=T2_IT_Pisa</a>
-                        <br> 3. Retrieve the list for sites satisfying a regex (e.g. T2_UK_%) <a href="{% url accessedBlocksStatLastAcc %}?sitename=T2_UK_%">accessedBlocksStatLastAcc/?sitename=T2_UK_%</a>
+                        <br> 2. Retrieve the list for a given site (e.g. T2_IT_Pisa): <a href="{% url "accessedBlocksStatLastAcc" %}?sitename=T2_IT_Pisa">accessedBlocksStatLastAcc/?sitename=T2_IT_Pisa</a>
+                        <br> 3. Retrieve the list for sites satisfying a regex (e.g. T2_UK_%) <a href="{% url "accessedBlocksStatLastAcc" %}?sitename=T2_UK_%">accessedBlocksStatLastAcc/?sitename=T2_UK_%</a>
 
                         <br>
                 </td>
@@ -150,9 +150,9 @@
         <tr>
                 <td class="feature">Examples</td>
                 <td class="descr">
-                        1. Retrieve the list for a given site (e.g. T2_IT_Pisa): <a href="{% url popdbcombineLastAcc %}?sitename=T2_IT_Pisa">popdbcombineLastAcc/?sitename=T2_IT_Pisa</a>
+                        1. Retrieve the list for a given site (e.g. T2_IT_Pisa): <a href="{% url "popdbcombineLastAcc" %}?sitename=T2_IT_Pisa">popdbcombineLastAcc/?sitename=T2_IT_Pisa</a>
                         <br>
-                        2. Retrieve the list for a given site (e.g. T2_IT_Pisa) in a specified time window: <a href="{% url popdbcombineLastAcc %}?sitename=T2_IT_Pisa&tstart=2012-02-10&tstop=2012-02-11">popdbcombineLastAcc/?sitename=T2_IT_Pisa&tstart=2012-02-10&tstop=2012-02-11</a>
+                        2. Retrieve the list for a given site (e.g. T2_IT_Pisa) in a specified time window: <a href="{% url "popdbcombineLastAcc" %}?sitename=T2_IT_Pisa&tstart=2012-02-10&tstop=2012-02-11">popdbcombineLastAcc/?sitename=T2_IT_Pisa&tstart=2012-02-10&tstop=2012-02-11</a>
                         <br>
                 </td>
         </tr>

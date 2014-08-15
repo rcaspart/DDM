@@ -8,6 +8,6 @@
 
 
 {% block js %}
-{% url xrdDataTierStatInTimeWindow as insert_jsonurlbase %}
+{% url "xrdDataTierStatInTimeWindow" as insert_jsonurlbase %}
 {{ block.super }}
 {% endblock js %}

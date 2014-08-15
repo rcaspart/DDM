@@ -42,17 +42,17 @@
                                         <li>
                                         <a class="MenuBarItemSubmenu">Most popular</a>
                                         <ul>
-                    	                       <li><a href="{% url datasetplot %}"     >DataSets</a></li>
-                                               <li><a href="{% url datasetnameplot %}" >ProcessedDatasets</a></li>
-                                               <li><a href="{% url datatierplot %}"    >DataTiers</a></li>
+                    	                       <li><a href="{% url "datasetplot" %}"     >DataSets</a></li>
+                                               <li><a href="{% url "datasetnameplot" %}" >ProcessedDatasets</a></li>
+                                               <li><a href="{% url "datatierplot" %}"    >DataTiers</a></li>
 					</ul>
                                         </li>
 					<li>
                                         <a class="MenuBarItemSubmenu">Custom</a>
                                         <ul>
-                                               <li><a href="{% url customdsplot %}"  >DataSets</a></li>
-                                               <li><a href="{% url customdsnplot %}" >Processed DataSets</a></li>
-                                               <li><a href="{% url customdtplot %}"  >DataTiers</a></li>
+                                               <li><a href="{% url "customdsplot" %}"  >DataSets</a></li>
+                                               <li><a href="{% url "customdsnplot" %}" >Processed DataSets</a></li>
+                                               <li><a href="{% url "customdtplot" %}"  >DataTiers</a></li>
                                         </ul>
                                         </li>
 
@@ -64,36 +64,36 @@
                                         <li>
                                         <a class="MenuBarItemSubmenu">Most Popular</a>
                                         <ul>
-                                             <li><a href="{% url datasettable     %}">DataSet          </a></li>
-                                             <li><a href="{% url datasetnametable %}">ProcessedDatasets</a></li>
-                                             <li><a href="{% url datatiertable    %}">DataTiers        </a></li>
+                                             <li><a href="{% url "datasettable"     %}">DataSet          </a></li>
+                                             <li><a href="{% url "datasetnametable" %}">ProcessedDatasets</a></li>
+                                             <li><a href="{% url "datatiertable"    %}">DataTiers        </a></li>
                                         </ul>
                                         </li>
-                                        <li><a href="{% url userstat         %}">User Stats                    </a></li>
+                                        <li><a href="{% url "userstat"         %}">User Stats                    </a></li>
                                         <li>
                                         <a class="MenuBarItemSubmenu">Corrupted Files</a>
                                         <ul>
-                                             <li><a href="{% url corruptedfilesSiteSummary   %}">Site Summary     </a></li>
-                                             <li><a href="{% url corruptedfilesDSSummary     %}">Site & DS Summary</a></li>
-                                             <li><a href="{% url corruptedfiles              %}">File View        </a></li>
+                                             <li><a href="{% url "corruptedfilesSiteSummary"   %}">Site Summary     </a></li>
+                                             <li><a href="{% url "corruptedfilesDSSummary"     %}">Site & DS Summary</a></li>
+                                             <li><a href="{% url "corruptedfiles"              %}">File View        </a></li>
 
                                         </ul>
                                         </li>
                                         </ul>
                     <li><a href="#" class="style1">API</a>
                     <ul>
-                            <li><a href="{% url victorinterfaceindex %}">Victor Json API</a></li>
-                            <li><a href="{% url popularityapidoc %}"    >Popularity Json API</a></li>
+                            <li><a href="{% url "victorinterfaceindex" %}">Victor Json API</a></li>
+                            <li><a href="{% url "popularityapidoc" %}"    >Popularity Json API</a></li>
 
                     </ul>
-		    <li><a href="{% url xrdIndex  %}">Xrd Popularity</a></li>
+		    <li><a href="{% url "xrdIndex"  %}">Xrd Popularity</a></li>
                     <li><a href="/victor/accounting">Victor</a></li>
                     <li><a href="#" class="style1">Support</a>
                     <ul>
                            <li><a href="https://svnweb.cern.ch/trac/popdb/wiki">Wiki</a></li>
                            <li><a href="https://svnweb.cern.ch/trac/popdb/newticket?component=Popularity">Bug Report</a></li>
-                           <li><a href="{% url popularityutility %}">Utility</a></li>
-                           <li><a href="{% url popularityversionlog %}">Versions log</a></li>
+                           <li><a href="{% url "popularityutility" %}">Utility</a></li>
+                           <li><a href="{% url "popularityversionlog" %}">Versions log</a></li>
 
                     </ul>
 

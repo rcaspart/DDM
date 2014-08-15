@@ -36,20 +36,20 @@
                                         <li>
                                         <a class="MenuBarItemSubmenu">Most Popular</a>
                                         <ul>
-                                               <li><a href="{% url xrdDataSetPlot     %}">DataSets          </a></li>
-                                               <li><a href="{% url xrdDataSetNamePlot %}">Processed Datasets</a></li>
-                                               <li><a href="{% url xrdDataTierPlot    %}">DataTiers         </a></li>
+                                               <li><a href="{% url "xrdDataSetPlot"     %}">DataSets          </a></li>
+                                               <li><a href="{% url "xrdDataSetNamePlot" %}">Processed Datasets</a></li>
+                                               <li><a href="{% url "xrdDataTierPlot"    %}">DataTiers         </a></li>
                                         </ul>
                                         </li>
                                         <li>
                                         <a class="MenuBarItemSubmenu">Custom Plots</a>
                                         <ul>
-                                               <li><a href="{% url xrdCustomdsplot          %}">DataSets            </a></li>
-                                               <li><a href="{% url xrdCustomprocesseddsplot %}">Processed DataSets  </a></li>
+                                               <li><a href="{% url "xrdCustomdsplot"          %}">DataSets            </a></li>
+                                               <li><a href="{% url "xrdCustomprocesseddsplot" %}">Processed DataSets  </a></li>
 
                                         </ul>
                                         </li>
-                                        <li><a href="{% url xrdUserDataPlot    %}">User Collections               </a></li>
+                                        <li><a href="{% url "xrdUserDataPlot"    %}">User Collections               </a></li>
 
                         </ul>
                     </li>
@@ -59,36 +59,36 @@
                                         <li>
                                         <a class="MenuBarItemSubmenu">Most Popular</a>
                                         <ul>
-                                             <li><a href="{% url xrdDataSetTable     %}">DataSet          </a></li>
-                                             <li><a href="{% url xrdDataSetNameTable %}">ProcessedDatasets</a></li>
-                                             <li><a href="{% url xrdDataTierTable    %}">DataTiers        </a></li>
+                                             <li><a href="{% url "xrdDataSetTable"     %}">DataSet          </a></li>
+                                             <li><a href="{% url "xrdDataSetNameTable" %}">ProcessedDatasets</a></li>
+                                             <li><a href="{% url "xrdDataTierTable"    %}">DataTiers        </a></li>
 
                                         </ul>
                                         </li>
-                                        <li><a href="{% url xrdLocalGlobalUserStatTable    %}">DataTiers Global Vs Local   </a></li>
-                                        <li><a href="{% url xrdUserDataTable    %}">User Collections              </a></li>
-                                        <li><a href="{% url xrdUserStatTable    %}">User Stats                    </a></li>
+                                        <li><a href="{% url "xrdLocalGlobalUserStatTable"    %}">DataTiers Global Vs Local   </a></li>
+                                        <li><a href="{% url "xrdUserDataTable"    %}">User Collections              </a></li>
+                                        <li><a href="{% url "xrdUserStatTable"    %}">User Stats                    </a></li>
 
                                         </ul>
                     <li><a href="#" class="style1">xrd monitor</a>
                     <ul>
-                            <li><a href="{% url xrdMonPlotAccessRate %}">Monitor Access rates</a></li>
-                            <li><a href="{% url xrdMonPlotPPS %}">Monitor PPSTest Accesses</a></li>
+                            <li><a href="{% url "xrdMonPlotAccessRate" %}">Monitor Access rates</a></li>
+                            <li><a href="{% url "xrdMonPlotPPS" %}">Monitor PPSTest Accesses</a></li>
 
                     </ul>
                     <li><a href="#" class="style1">User Collection</a>
                     <ul>
-                            <li><a href="{% url xrdUserDataTable %}">Table  </a></li>
-                            <li><a href="{% url xrdUserDataPlot  %}">Plot   </a></li>
+                            <li><a href="{% url "xrdUserDataTable" %}">Table  </a></li>
+                            <li><a href="{% url "xrdUserDataPlot"  %}">Plot   </a></li>
 
                     </ul>
-                    <li><a href="{% url popularityindex %}">CRAB Popularity</a></li>
+                    <li><a href="{% url "popularityindex" %}">CRAB Popularity</a></li>
                     <li><a href="#" class="style1">Support</a>
                     <ul>
                            <li><a href="https://svnweb.cern.ch/trac/popdb/wiki">Wiki</a></li>
                            <li><a href="https://svnweb.cern.ch/trac/popdb/newticket?component=Popularity">Bug Report</a></li>
-                           <li><a href="{% url popularityutility %}">Utility</a></li>
-                           <li><a href="{% url xrdpopularityversionlog %}">Versions log</a></li>
+                           <li><a href="{% url "popularityutility" %}">Utility</a></li>
+                           <li><a href="{% url "xrdpopularityversionlog" %}">Versions log</a></li>
                     </ul>
                     </ul>
 

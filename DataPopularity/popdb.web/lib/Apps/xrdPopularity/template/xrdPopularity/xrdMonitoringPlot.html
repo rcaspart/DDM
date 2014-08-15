@@ -78,7 +78,7 @@
 	};
 
 
-    var jsonurl= "{% url xrdMonPlotData %}"
+    var jsonurl= "{% url "xrdMonPlotData" %}"
     {% with thefunction="hctimeplot(jsonurl,info); hctimeplot(jsonurl,info2);" %}
 
         $(document).ready(function(){

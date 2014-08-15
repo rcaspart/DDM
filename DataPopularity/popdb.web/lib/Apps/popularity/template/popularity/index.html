@@ -94,13 +94,13 @@
 
         $(document).ready(function(){
 		setDates();
-		DataTierStatInTimeWindow('{% url DataTierStatInTimeWindow %}');
+		DataTierStatInTimeWindow('{% url "DataTierStatInTimeWindow" %}');
 	});
         $("#select_siteName").bind("change", function() {
-                DataTierStatInTimeWindow('{% url DataTierStatInTimeWindow %}');        
+                DataTierStatInTimeWindow('{% url "DataTierStatInTimeWindow" %}');        
         });
 	$('#submit').click(function() {
-		DataTierStatInTimeWindow('{% url DataTierStatInTimeWindow %}');
+		DataTierStatInTimeWindow('{% url "DataTierStatInTimeWindow" %}');
 	});
 </script>
 
